@@ -32,7 +32,7 @@ class HomeController < ApplicationController
 
             #@chart_data = hash
 
-            @chart_data << { data: hash }
+            @chart_data << { currency: currency[:code],data: hash }
 
             #asdasd
         

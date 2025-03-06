@@ -1,5 +1,16 @@
-<% @chart_data.each do |chart| %>
-    <div>
-        <%= line_chart chart[:data] %>
+<h1 class='title'>Cotação de moedas</h1>
+
+<div class="charts-container">
+  <% @chart_data.each_with_index do |chart, index| %>
+    <div class="chart-item">
+        <h3 class="chart-title">Cotação <%= chart[:currency] %></h3>
+      <%= line_chart chart[:data], height: '300px' %>
     </div>
- <% end %>   
+  <% end %>
+</div>
+
+<div class='div_space'> </div>
+
+<footer class="footer">
+  <p>Desenvolvido por Flávio</p>
+</footer>
